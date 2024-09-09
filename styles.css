@@ -473,10 +473,10 @@ body {
    line-height: 0;
    width: auto;
    height: auto;
-   background: rgba(255, 255, 255, 0.2);
+   background: rgba(249, 3, 3, 0.2);
    border-radius: 50px;
    transition: 0.3s;
-   color: rgba(255, 255, 255, 0.5);
+   color: rgba(15, 15, 15, 0.5);
    width: 54px;
    height: 54px;
    display: flex;
@@ -633,7 +633,7 @@ body {
  
 
  .about {
-   background: linear-gradient(to bottom, black,rgb(15, 15, 15));
+   background: linear-gradient(to bottom, rgb(21, 20, 20),rgb(15, 15, 15));
  }
  
  .about .content {
@@ -643,7 +643,7 @@ body {
  .about .content h3 {
    font-weight: 400;
    font-size: 34px;
-   color: #5f5950;
+   color: #0d0d0d;
  }
  
  .about .content h4 {
@@ -654,7 +654,7 @@ body {
  
  .about .content p {
    font-size: 15px;
-   color: #848484;
+   color: #0b0a0a;
    text-align: justify;
  }
  
@@ -705,7 +705,7 @@ body {
  .about .play-btn {
    width: 94px;
    height: 94px;
-   background: radial-gradient(#ffb03b 50%, rgba(255, 176, 59, 0.4) 52%);
+   background: radial-gradient(#ffb03b 50%, rgb(235, 234, 232) 52%);
    border-radius: 50%;
    display: block;
    position: absolute;
@@ -749,7 +749,7 @@ body {
    border: 5px solid rgba(255, 176, 59, 0.7);
    top: -15%;
    left: -15%;
-   background: rgba(198, 16, 0, 0);
+   background: rgba(235, 226, 226, 0.951);
  }
  
  .about .play-btn:hover::after {
@@ -1284,7 +1284,7 @@ body {
  .testimonials .swiper-pagination .swiper-pagination-bullet {
    width: 12px;
    height: 12px;
-   background-color: rgba(255, 255, 255, 0.5);
+   background-color: rgba(236, 7, 7, 0.5);
    opacity: 1;
  }
  
@@ -1396,14 +1396,14 @@ body {
    color: rgb(253, 6, 6); 
  }
  .transparent-background {
-   background-color: rgba(28, 4, 4, 0.938); 
+   background-color: rgba(13, 13, 13, 0.938); 
    padding: 20px;
    transition: transform 0.9s ease, width 0.3s ease, height 0.3s ease;
  }
 
  .separator {
    height: 1px;
-   background-color: #ece8e3;
+   background-color: #d758582d;
    margin: 10px 0;
  }
  
@@ -1435,7 +1435,7 @@ body {
   transform: scale(1.1);
 }
 .footer {
- background-color: rgba(239, 234, 234, 0.938);
+ background-color: rgba(227, 192, 192, 0.938);
 }
 .navbar ul {
   list-style: none;
@@ -1471,7 +1471,7 @@ body {
 }
 
 .contact-section {
-  background-color: rgba(9, 9, 9, 0.8); 
+  background-color: rgba(32, 30, 30, 0.8); 
   padding: 20px; 
   border-radius: 100px; 
 }

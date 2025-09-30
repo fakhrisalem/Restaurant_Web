@@ -16,7 +16,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Satisfy&display=swap" rel="stylesheet">
 
-
   <!-- Vendor CSS Files -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -24,561 +23,9 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
 
-  <!-- Main CSS -->
-  <style>
-    :root {
-      --primary-color: #ffb03b;
-      --dark-bg: #121212;
-      --surface-bg: #1a1a1a;
-      --text-light: #fff;
-      --text-secondary: #ccc;
-    }
+  <!-- Main CSS File -->
+  <link href="style.css" rel="stylesheet">
 
-    body {
-      background-color: var(--dark-bg);
-      font-family: 'Poppins', sans-serif;
-      color: var(--text-light);
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--primary-color);
-    }
-
-    a:hover {
-      color: #ffc56e;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'Satisfy', cursive;
-    }
-
-    section {
-      padding: 60px 0;
-      overflow: hidden;
-    }
-
-    .section-title {
-      text-align: center;
-      padding-bottom: 30px;
-    }
-
-    .section-title h2 {
-      margin: 15px 0 0 0;
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--text-light);
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .section-title h2 span {
-      color: var(--primary-color);
-    }
-
-    .section-title p {
-      margin: 15px auto 0 auto;
-      font-weight: 300;
-      color: var(--text-secondary);
-    }
-
-    .btn-primary {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
-      color: #000;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-    }
-
-    .btn-primary:hover {
-      background-color: #ffc56e;
-      border-color: #ffc56e;
-    }
-
-    /*--------------------------------------------------------------
-    # Header
-    --------------------------------------------------------------*/
-    #header {
-      transition: all 0.5s;
-      z-index: 997;
-      padding: 10px 0;
-      background: rgba(12, 11, 10, 0.85);
-    }
-
-    #header.header-scrolled {
-      background: rgba(12, 11, 10, 0.95);
-    }
-
-    #header .logo img {
-      padding: 0;
-      margin: 0;
-      max-height: 50px;
-    }
-
-    /*--------------------------------------------------------------
-    # Navigation Menu
-    --------------------------------------------------------------*/
-    .navbar {
-      padding: 0;
-    }
-
-    .navbar ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      list-style: none;
-      align-items: center;
-    }
-
-    .navbar li {
-      position: relative;
-    }
-
-    .navbar a,
-    .navbar a:focus {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 15px;
-      color: var(--text-light);
-      white-space: nowrap;
-      transition: 0.3s;
-      font-size: 14px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-
-    .navbar a:hover,
-    .navbar .active,
-    .navbar .active:focus,
-    .navbar li:hover>a {
-      color: var(--primary-color);
-    }
-
-    .book-a-table-btn {
-      background: var(--primary-color);
-      color: #000;
-      border-radius: 50px;
-      padding: 10px 25px;
-      transition: 0.3s;
-      white-space: nowrap;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-    }
-
-    .book-a-table-btn:hover {
-      background: #ffc56e;
-    }
-
-    .mobile-nav-toggle {
-      color: #fff;
-      font-size: 28px;
-      cursor: pointer;
-      display: none;
-      line-height: 0;
-      transition: 0.5s;
-    }
-    
-    @media (max-width: 991px) {
-      .mobile-nav-toggle {
-        display: block;
-      }
-      .navbar ul {
-        display: none;
-      }
-    }
-    
-    body.mobile-nav-active .navbar-mobile {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .navbar-mobile {
-      position: fixed;
-      overflow: hidden;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background: rgba(20, 20, 20, 0.95);
-      transition: 0.3s;
-      z-index: 998;
-      opacity: 0;
-      visibility: hidden;
-    }
-    
-    .navbar-mobile .mobile-nav-toggle {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-    }
-    
-    .navbar-mobile ul {
-      display: block;
-      position: absolute;
-      top: 55px;
-      right: 15px;
-      bottom: 15px;
-      left: 15px;
-      padding: 10px 0;
-      border-radius: 8px;
-      background-color: #fff;
-      overflow-y: auto;
-      transition: 0.3s;
-    }
-
-    .navbar-mobile a,
-    .navbar-mobile a:focus {
-        padding: 10px 20px;
-        font-size: 15px;
-        color: #433f39;
-    }
-
-
-    /*--------------------------------------------------------------
-    # Hero Section
-    --------------------------------------------------------------*/
-    #hero {
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      padding: 0;
-    }
-
-    #hero .carousel-item {
-      width: 100%;
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-
-    #hero .carousel-item::before {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.6);
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-    }
-    
-    #hero .carousel-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      bottom: 0; top: 0; left: 0; right: 0;
-    }
-    
-    #hero .carousel-content {
-        text-align: center;
-    }
-
-    #hero h2 {
-      font-size: 48px;
-      font-weight: 700;
-      color: var(--text-light);
-    }
-
-    #hero h2 span {
-      color: var(--primary-color);
-    }
-    
-    #hero p {
-      width: 80%;
-      margin: 0 auto 30px auto;
-    }
-    
-    #hero .btn-menu,
-    #hero .btn-book {
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      display: inline-block;
-      padding: 12px 30px;
-      border-radius: 50px;
-      transition: 0.5s;
-      line-height: 1;
-      margin: 0 10px;
-      color: #fff;
-      border: 2px solid var(--primary-color);
-    }
-    
-    #hero .btn-menu:hover,
-    #hero .btn-book:hover {
-      background: var(--primary-color);
-      color: #000;
-    }
-
-    @media (max-width: 768px) {
-      #hero h2 {
-        font-size: 28px;
-      }
-    }
-
-    /*--------------------------------------------------------------
-    # Sections General
-    --------------------------------------------------------------*/
-    .about, .why-us, .menu, .book-a-table, .gallery, .testimonials {
-      background-color: var(--dark-bg);
-    }
-    
-    .about, .menu, .book-a-table {
-        background-color: var(--surface-bg);
-    }
-
-    .fade-in p {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .fade-in p.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .about .video-box video {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    /* Why Choose Us Section */
-    .why-us .box {
-      padding: 50px 30px;
-      box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.1);
-      transition: all ease-in-out 0.3s;
-      background: var(--surface-bg);
-      border-radius: 10px;
-      text-align: center;
-      height: 100%;
-    }
-
-    .why-us .box span {
-      display: block;
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--primary-color);
-    }
-
-    .why-us .box h4 {
-      font-size: 24px;
-      font-weight: 600;
-      padding: 0;
-      margin: 20px 0;
-      color: var(--text-light);
-       font-family: 'Poppins', sans-serif;
-    }
-
-    .why-us .box:hover {
-      background: var(--primary-color);
-    }
-
-    .why-us .box:hover span,
-    .why-us .box:hover h4,
-    .why-us .box:hover p {
-      color: #000;
-    }
-
-    /* Menu Section */
-    .menu #menu-flters li.filter-active {
-      background: var(--primary-color);
-      color: #000;
-    }
-    
-    .menu .menu-img {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      float: left;
-      border: 5px solid rgba(255, 255, 255, 0.1);
-      object-fit: cover;
-    }
-    
-    .menu .menu-content-container {
-        margin-left: 85px;
-        margin-right: 0;
-    }
-
-    .menu .menu-content {
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    .menu .menu-ingredients {
-        color: var(--text-secondary);
-    }
-
-    /* Testimonials Section */
-    .testimonials {
-      background: url(https://www.kemetexperience.com/wp-content/uploads/2022/05/IMG_2133.jpg) no-repeat center center;
-      background-size: cover;
-      position: relative;
-    }
-
-    .testimonials::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: rgba(12, 11, 10, 0.8);
-    }
-
-    .testimonials .container {
-      position: relative;
-    }
-
-    .testimonials .testimonial-item .testimonial-img {
-      width: 90px;
-      border-radius: 50%;
-      border: 4px solid rgba(255, 255, 255, 0.2);
-      margin: 0 auto;
-    }
-
-    .testimonials .testimonial-item .stars i {
-      color: var(--primary-color);
-    }
-    
-    .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-      background-color: var(--primary-color);
-    }
-
-    /* Book a Table Section */
-    .book-a-table .form-control {
-      border-radius: 0;
-      background: #2a2a2a;
-      border: 2px solid #444;
-      color: white;
-    }
-
-    .book-a-table .form-control:focus {
-      background: #2a2a2a;
-      border-color: var(--primary-color);
-      box-shadow: none;
-    }
-
-    /*--------------------------------------------------------------
-    # Footer
-    --------------------------------------------------------------*/
-    #footer {
-        background: #0c0b09;
-        color: #fff;
-        font-size: 14px;
-        padding: 0;
-    }
-
-    #footer .footer-top {
-        padding: 60px 0 30px 0;
-        background: #1a1814;
-    }
-    
-    #footer .footer-top .footer-info {
-        margin-bottom: 30px;
-    }
-    
-    #footer .footer-top .footer-info h3 {
-        font-size: 24px;
-        margin: 0 0 20px 0;
-        padding: 2px 0 2px 0;
-        line-height: 1;
-        font-weight: 700;
-        color: var(--primary-color);
-    }
-    
-    #footer .footer-top .footer-info p {
-        font-size: 14px;
-        line-height: 24px;
-        margin-bottom: 0;
-        font-family: "Poppins", sans-serif;
-        color: #a4a199;
-    }
-
-    #footer .footer-top .footer-links {
-        margin-bottom: 30px;
-    }
-    
-    #footer .footer-top .footer-links h4 {
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
-        position: relative;
-        padding-bottom: 12px;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    #footer .footer-top .footer-links ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    #footer .footer-top .footer-links ul i {
-        padding-right: 2px;
-        color: var(--primary-color);
-        font-size: 18px;
-        line-height: 1;
-    }
-    
-    #footer .footer-top .footer-links ul li {
-        padding: 10px 0;
-        display: flex;
-        align-items: center;
-    }
-    
-    #footer .footer-top .footer-links ul a {
-        color: #a4a199;
-        transition: 0.3s;
-        display: inline-block;
-        line-height: 1;
-    }
-
-    #footer .footer-top .footer-newsletter form {
-        margin-top: 30px;
-        background: #28251f;
-        padding: 6px 10px;
-        position: relative;
-        border-radius: 50px;
-    }
-    
-    #footer .footer-top .footer-newsletter form input[type="email"] {
-        border: 0;
-        padding: 4px;
-        width: calc(100% - 110px);
-        background: #28251f;
-        color: white;
-    }
-    
-    #footer .footer-top .footer-newsletter form input[type="submit"] {
-        position: absolute;
-        top: 0;
-        right: -2px;
-        bottom: 0;
-        border: 0;
-        background: none;
-        font-size: 16px;
-        padding: 0 20px;
-        background: var(--primary-color);
-        color: #000;
-        transition: 0.3s;
-        border-radius: 50px;
-    }
-
-    #footer .copyright {
-        text-align: center;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-top: 1px solid #28251f;
-    }
-    
-  </style>
 </head>
 
 <body>
@@ -638,22 +85,22 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container-fluid">
-          <div class="row align-items-center gy-4">
-              <div class="col-lg-5 align-items-stretch video-box">
-                  <video controls poster="https://i.pinimg.com/originals/25/c0/5a/25c05a9fa27d6f129eed4e5da86d4166.png" class="w-100">
-                      <source src="https://cdn.pixabay.com/video/2016/02/29/2339-157269920_large.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
-              </div>
-              <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
-                  <div class="content px-lg-5 fade-in">
-                      <h3 style="color: #f07e0d;">Discover <strong>Our History</strong></h3>
-                      <h1>Nile Restaurant in Cairo, Egypt</h1>
-                      <p><strong>Restaurant History:</strong> Nile Restaurant is one of the oldest upscale restaurants in Cairo, with a long history dating back for decades. This restaurant is a popular destination that offers a unique and upscale dining experience to its visitors.</p>
-                      <p><strong><i class="bi bi-check-circle"></i> Food:</strong> Nile Restaurant is distinguished by offering a wide range of traditional Egyptian and international foods.</p>
-                  </div>
-              </div>
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-5 align-items-stretch video-box">
+            <video controls poster="https://i.pinimg.com/originals/25/c0/5a/25c05a9fa27d6f129eed4e5da86d4166.png" class="w-100">
+              <source src="https://cdn.pixabay.com/video/2016/02/29/2339-157269920_large.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+            <div class="content px-lg-5 fade-in">
+              <h3 style="color: #f07e0d;">Discover <strong>Our History</strong></h3>
+              <h1>Nile Restaurant in Cairo, Egypt</h1>
+              <p><strong>Restaurant History:</strong> Nile Restaurant is one of the oldest upscale restaurants in Cairo, with a long history dating back for decades. This restaurant is a popular destination that offers a unique and upscale dining experience to its visitors.</p>
+              <p><strong><i class="bi bi-check-circle"></i> Food:</strong> Nile Restaurant is distinguished by offering a wide range of traditional Egyptian and international foods.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- End About Section -->
@@ -691,56 +138,56 @@
       </div>
     </section>
     <!-- End Why Choose Us Section -->
-    
+
     <!-- ======= Menu Section ======= -->
     <section id="menu" class="menu">
-        <div class="container">
-            <div class="section-title">
-              <h2>Our <span>Menu</span></h2>
-              <p>Check our tasty menu</p>
-            </div>
-    
-            <div class="row">
-              <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="menu-flters">
-                  <li data-filter="*" class="filter-active">All</li>
-                  <li data-filter=".filter-drinks">Drinks</li>
-                  <li data-filter=".filter-salads">Salads</li>
-                  <li data-filter=".filter-specialty">Specialty</li>
-                  <li data-filter=".filter-DESSERTS">Desserts</li>
-                </ul>
-              </div>
-            </div>
-    
-            <div class="row menu-container">
-              <!-- Full Menu Restored Here -->
-              <div class="col-lg-6 menu-item filter-specialty"><img src="https://resizer.otstatic.com/v2/photos/large/25875847.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Salmon Verde</a><span>360.0 EGP</span></div></div></div>
-              <div class="col-lg-6 menu-item filter-DESSERTS"><img src="https://th.bing.com/th/id/OIP.Mzid3JFYaOCqNCDl2TY8cAAAAA?rs=1&pid=ImgDetMain" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Nutella Crepe</a><span>150.0 EGP</span></div><div class="menu-ingredients">Homemade crepe topped with rich Nutella</div></div></div>
-              <div class="col-lg-6 menu-item filter-DESSERTS"><img src="https://i.pinimg.com/originals/26/19/40/2619403dca988bd23d2fb6f683a76b69.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Banoffee Pie</a><span>150.0 EGP</span></div><div class="menu-ingredients">Biscuit base with toffee, bananas, and cream</div></div></div>
-              <div class="col-lg-6 menu-item filter-specialty"><img src="https://aredspatula.com/wp-content/uploads/2020/11/IMG_7242-600x600.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Shrimp Verde</a><span>360.0 EGP</span></div></div></div>
-              <div class="col-lg-6 menu-item filter-drinks"><img src="https://th.bing.com/th/id/R.60e58babd9402c13d434d087263a8600?rik=nDiX%2bSFuEuMlyg&pid=ImgRaw&r=0" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Fresh Juice</a><span>60.0 EGP</span></div></div></div>
-              <div class="col-lg-6 menu-item filter-DESSERTS"><img src="https://cookieandkate.com/images/2018/06/easy-breakfast-quesadillas-2.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Breakfast Quesadillas</a><span>130.0 EGP</span></div><div class="menu-ingredients">Scrambled eggs with vegetables and cheese in a tortilla</div></div></div>
-              <div class="col-lg-6 menu-item filter-specialty"><img src="https://www.thecookierookie.com/wp-content/uploads/2023/04/baked-chicken-breast-recipe-6-edited-340x453.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Chicken Verde</a><span>260.0 EGP</span></div></div></div>
-              <div class="col-lg-6 menu-item filter-drinks"><img src="https://cdn.godrej.com/img/Product/637336036276640666_Reduced%20Sugar-pro.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Coffee</a><span>80.0 EGP</span></div><div class="menu-ingredients">Doppio, Americano, Latte, Flat White, Cappuccino</div></div></div>
-              <div class="col-lg-6 menu-item filter-drinks"><img src="https://beamingbaker.com/wp-content/uploads/2017/05/Triple-Berry-Smoothie-5-Ingredient-Paleo-Vegan-Gluten-Free-Dairy-Free-1.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Smoothies</a><span>70.0 EGP</span></div><div class="menu-ingredients">Mango, Strawberry, Blueberry, Milkshake</div></div></div>
-              <div class="col-lg-6 menu-item filter-drinks"><img src="https://www.chefkunalkapur.com/wp-content/uploads/2021/07/SRG_190621-CKK_167-683x1024.jpg?v=1626926212" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Iced Coffee</a><span>80.0 EGP</span></div><div class="menu-ingredients">Iced Coffee, Iced Mocha, Iced Caramel Macchiato</div></div></div>
-              <div class="col-lg-6 menu-item filter-salads"><img src="https://www.thelastfoodblog.com/wp-content/uploads/2022/08/peach-burrata-salad-f_i-2-1536x1536.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Nut Salad</a><span>80.0 EGP</span></div><div class="menu-ingredients">Lettuce, arugula, cherry tomatoes, grilled chicken</div></div></div>
-              <div class="col-lg-6 menu-item filter-specialty"><img src="https://howdaily.com/wp-content/uploads/2018/05/chicken-mushroom-soup-800x1200.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Chicken Mushroom Soup</a><span>100.0 EGP</span></div><div class="menu-ingredients">Creamy chicken soup infused with aromatic herbs</div></div></div>
-              <div class="col-lg-6 menu-item filter-specialty"><img src="https://th.bing.com/th/id/OLC.EqorvJCfoCZjFg480x360?&rs=1&pid=ImgDetMain" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Pasta</a><span>270.0 EGP</span></div><div class="menu-ingredients">Grilled shrimp on a bed of pasta with pink sauce</div></div></div>
-              <div class="col-lg-6 menu-item filter-specialty"><img src="https://just-eat-prod-sg-res.cloudinary.com/image/upload/c_fill,d_au:cuisines:pizza-8.jpg,f_auto,q_auto,w_500/v1/au/restaurants/782258.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Pizza</a><span>200.0 EGP</span></div><div class="menu-ingredients">BBQ Chicken, Margherita, Vegetarian, Shrimp</div></div></div>
-              <div class="col-lg-6 menu-item filter-specialty"><img src="https://img.freepik.com/premium-photo/fresh-burger-fast-food-with-beef-cream-cheese-generated-by-ai_949335-12.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Burger</a><span>200.0 EGP</span></div><div class="menu-ingredients">Jumbo fried shrimp with our unique crispy mix</div></div></div>
-              <div class="col-lg-6 menu-item filter-salads"><img src="https://im.whatshot.in/img/2021/Feb/sunday-brunch-at-novotel-pune-1612534812.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Greek Salad</a><span>50.0 EGP</span></div><div class="menu-ingredients">A refreshing lettuce salad from Greece, simple and full of flavor</div></div></div>
-            </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>Our <span>Menu</span></h2>
+          <p>Check our tasty menu</p>
         </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-drinks">Drinks</li>
+              <li data-filter=".filter-salads">Salads</li>
+              <li data-filter=".filter-specialty">Specialty</li>
+              <li data-filter=".filter-DESSERTS">Desserts</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container">
+          <!-- Full Menu Restored Here -->
+          <div class="col-lg-6 menu-item filter-specialty"><img src="https://resizer.otstatic.com/v2/photos/large/25875847.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Salmon Verde</a><span>360.0 EGP</span></div></div></div>
+          <div class="col-lg-6 menu-item filter-DESSERTS"><img src="https://th.bing.com/th/id/OIP.Mzid3JFYaOCqNCDl2TY8cAAAAA?rs=1&pid=ImgDetMain" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Nutella Crepe</a><span>150.0 EGP</span></div><div class="menu-ingredients">Homemade crepe topped with rich Nutella</div></div></div>
+          <div class="col-lg-6 menu-item filter-DESSERTS"><img src="https://i.pinimg.com/originals/26/19/40/2619403dca988bd23d2fb6f683a76b69.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Banoffee Pie</a><span>150.0 EGP</span></div><div class="menu-ingredients">Biscuit base with toffee, bananas, and cream</div></div></div>
+          <div class="col-lg-6 menu-item filter-specialty"><img src="https://aredspatula.com/wp-content/uploads/2020/11/IMG_7242-600x600.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Shrimp Verde</a><span>360.0 EGP</span></div></div></div>
+          <div class="col-lg-6 menu-item filter-drinks"><img src="https://th.bing.com/th/id/R.60e58babd9402c13d434d087263a8600?rik=nDiX%2bSFuEuMlyg&pid=ImgRaw&r=0" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Fresh Juice</a><span>60.0 EGP</span></div></div></div>
+          <div class="col-lg-6 menu-item filter-DESSERTS"><img src="https://cookieandkate.com/images/2018/06/easy-breakfast-quesadillas-2.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Breakfast Quesadillas</a><span>130.0 EGP</span></div><div class="menu-ingredients">Scrambled eggs with vegetables and cheese in a tortilla</div></div></div>
+          <div class="col-lg-6 menu-item filter-specialty"><img src="https://www.thecookierookie.com/wp-content/uploads/2023/04/baked-chicken-breast-recipe-6-edited-340x453.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Chicken Verde</a><span>260.0 EGP</span></div></div></div>
+          <div class="col-lg-6 menu-item filter-drinks"><img src="https://cdn.godrej.com/img/Product/637336036276640666_Reduced%20Sugar-pro.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Coffee</a><span>80.0 EGP</span></div><div class="menu-ingredients">Doppio, Americano, Latte, Flat White, Cappuccino</div></div></div>
+          <div class="col-lg-6 menu-item filter-drinks"><img src="https://beamingbaker.com/wp-content/uploads/2017/05/Triple-Berry-Smoothie-5-Ingredient-Paleo-Vegan-Gluten-Free-Dairy-Free-1.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Smoothies</a><span>70.0 EGP</span></div><div class="menu-ingredients">Mango, Strawberry, Blueberry, Milkshake</div></div></div>
+          <div class="col-lg-6 menu-item filter-drinks"><img src="https://www.chefkunalkapur.com/wp-content/uploads/2021/07/SRG_190621-CKK_167-683x1024.jpg?v=1626926212" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Iced Coffee</a><span>80.0 EGP</span></div><div class="menu-ingredients">Iced Coffee, Iced Mocha, Iced Caramel Macchiato</div></div></div>
+          <div class="col-lg-6 menu-item filter-salads"><img src="https://www.thelastfoodblog.com/wp-content/uploads/2022/08/peach-burrata-salad-f_i-2-1536x1536.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Nut Salad</a><span>80.0 EGP</span></div><div class="menu-ingredients">Lettuce, arugula, cherry tomatoes, grilled chicken</div></div></div>
+          <div class="col-lg-6 menu-item filter-specialty"><img src="https://howdaily.com/wp-content/uploads/2018/05/chicken-mushroom-soup-800x1200.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Chicken Mushroom Soup</a><span>100.0 EGP</span></div><div class="menu-ingredients">Creamy chicken soup infused with aromatic herbs</div></div></div>
+          <div class="col-lg-6 menu-item filter-specialty"><img src="https://th.bing.com/th/id/OLC.EqorvJCfoCZjFg480x360?&rs=1&pid=ImgDetMain" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Pasta</a><span>270.0 EGP</span></div><div class="menu-ingredients">Grilled shrimp on a bed of pasta with pink sauce</div></div></div>
+          <div class="col-lg-6 menu-item filter-specialty"><img src="https://just-eat-prod-sg-res.cloudinary.com/image/upload/c_fill,d_au:cuisines:pizza-8.jpg,f_auto,q_auto,w_500/v1/au/restaurants/782258.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Pizza</a><span>200.0 EGP</span></div><div class="menu-ingredients">BBQ Chicken, Margherita, Vegetarian, Shrimp</div></div></div>
+          <div class="col-lg-6 menu-item filter-specialty"><img src="https://img.freepik.com/premium-photo/fresh-burger-fast-food-with-beef-cream-cheese-generated-by-ai_949335-12.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Burger</a><span>200.0 EGP</span></div><div class="menu-ingredients">Jumbo fried shrimp with our unique crispy mix</div></div></div>
+          <div class="col-lg-6 menu-item filter-salads"><img src="https://im.whatshot.in/img/2021/Feb/sunday-brunch-at-novotel-pune-1612534812.jpg" class="menu-img" alt=""><div class="menu-content-container"><div class="menu-content"><a href="#">Greek Salad</a><span>50.0 EGP</span></div><div class="menu-ingredients">A refreshing lettuce salad from Greece, simple and full of flavor</div></div></div>
+        </div>
+      </div>
     </section>
     <!-- End Menu Section -->
-    
+
     <!-- ======= Events Section ======= -->
     <section id="events" class="events">
       <!-- Content Preserved -->
     </section>
     <!-- End Events Section -->
-    
+
     <!-- ======= Book A Table Section ======= -->
     <section id="book-a-table" class="book-a-table">
       <!-- Content Preserved -->
@@ -752,7 +199,7 @@
       <!-- Content Preserved -->
     </section>
     <!-- End Gallery Section -->
-    
+
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <!-- Content Preserved -->
@@ -760,7 +207,7 @@
     <!-- End Testimonials Section -->
   </main>
   <!-- End #main -->
-  
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">
@@ -815,161 +262,9 @@
   </footer>
   <!-- End Footer -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        "use strict";
+  <!-- Vendor JS Files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo
 
-        const select = (el, all = false) => {
-            el = el.trim()
-            if (all) {
-                return [...document.querySelectorAll(el)]
-            } else {
-                return document.querySelector(el)
-            }
-        }
-        
-        const on = (type, el, listener, all = false) => {
-            let selectEl = select(el, all)
-            if (selectEl) {
-                if (all) {
-                    selectEl.forEach(e => e.addEventListener(type, listener))
-                } else {
-                    selectEl.addEventListener(type, listener)
-                }
-            }
-        }
-
-        const onscroll = (el, listener) => {
-            el.addEventListener('scroll', listener)
-        }
-
-        let navbarlinks = select('#navbar .scrollto', true)
-        const navbarlinksActive = () => {
-            let position = window.scrollY + 200
-            navbarlinks.forEach(navbarlink => {
-                if (!navbarlink.hash) return
-                let section = select(navbarlink.hash)
-                if (!section) return
-                if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-                    navbarlink.classList.add('active')
-                } else {
-                    navbarlink.classList.remove('active')
-                }
-            })
-        }
-        window.addEventListener('load', navbarlinksActive)
-        onscroll(document, navbarlinksActive)
-
-        const scrollto = (el) => {
-            let header = select('#header')
-            let offset = header.offsetHeight
-            let elementPos = select(el).offsetTop
-            window.scrollTo({
-                top: elementPos - offset,
-                behavior: 'smooth'
-            })
-        }
-
-        let selectHeader = select('#header')
-        if (selectHeader) {
-            const headerScrolled = () => {
-                window.scrollY > 100 ? selectHeader.classList.add('header-scrolled') : selectHeader.classList.remove('header-scrolled');
-            }
-            window.addEventListener('load', headerScrolled)
-            onscroll(document, headerScrolled)
-        }
-
-        on('click', '.mobile-nav-toggle', function(e) {
-            select('body').classList.toggle('mobile-nav-active')
-            select('.navbar-mobile').classList.toggle('navbar-mobile-active')
-            this.classList.toggle('bi-list')
-            this.classList.toggle('bi-x')
-        })
-
-        on('click', '.scrollto', function(e) {
-            if (select(this.hash)) {
-                e.preventDefault()
-                let body = select('body');
-                if (body.classList.contains('mobile-nav-active')) {
-                   body.classList.remove('mobile-nav-active');
-                   let navbarToggle = select('.mobile-nav-toggle');
-                   navbarToggle.classList.toggle('bi-list');
-                   navbarToggle.classList.toggle('bi-x');
-                }
-                scrollto(this.hash)
-            }
-        }, true)
-
-        window.addEventListener('load', () => {
-            if (window.location.hash) {
-                if (select(window.location.hash)) {
-                    scrollto(window.location.hash)
-                }
-            }
-        });
-
-        let heroCarouselIndicators = select("#hero-carousel-indicators")
-        let heroCarouselItems = select('#heroCarousel .carousel-item', true)
-        heroCarouselItems.forEach((item, index) => {
-            (index === 0) ?
-            heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
-                heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
-        });
-
-        window.addEventListener('load', () => {
-            let menuContainer = select('.menu-container');
-            if (menuContainer) {
-                let menuIsotope = new Isotope(menuContainer, {
-                    itemSelector: '.menu-item',
-                    layoutMode: 'fitRows'
-                });
-                let menuFilters = select('#menu-flters li', true);
-                on('click', '#menu-flters li', function(e) {
-                    e.preventDefault();
-                    menuFilters.forEach(function(el) {
-                        el.classList.remove('filter-active');
-                    });
-                    this.classList.add('filter-active');
-                    menuIsotope.arrange({
-                        filter: this.getAttribute('data-filter')
-                    });
-                }, true);
-            }
-        });
-
-        new Swiper('.events-slider', {
-            speed: 600,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            slidesPerView: 'auto',
-            pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true }
-        });
-
-        new Swiper('.testimonials-slider', {
-            speed: 600,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            slidesPerView: 'auto',
-            pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true },
-             breakpoints: {
-                320: { slidesPerView: 1, spaceBetween: 20 },
-                1200: { slidesPerView: 1, spaceBetween: 0 }
-            }
-        });
-
-        const paragraphs = document.querySelectorAll('.fade-in p');
-        paragraphs.forEach((p, index) => {
-            setTimeout(() => {
-                p.classList.add('show');
-            }, index * 200);
-        });
-    });
-  </script>
-
-</body>
 </html>
 
 
